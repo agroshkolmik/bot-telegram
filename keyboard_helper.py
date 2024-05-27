@@ -7,3 +7,7 @@ def get_keyboard(buttons):
         kb.append([KeyboardButton(text=button)])
     reply_markup=ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
     return reply_markup
+keyboards={
+    UserStates.BASE: get_keyboard(["My paris", "Create pari"])
+    UserStates.CREATING_PARI: get_keyboard(["Cancel"])
+}

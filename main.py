@@ -16,7 +16,7 @@ dp=Dispatcher(storage=storage)
 
 @dp.message(Command("start"))
 async def start(message: types.Message, state:FSMContext):
-    kb=get_keyboard(["/test"])
+    kb=get_keyboard[UserStates.BASE]
     await message.answer("ku trup", reply_markup=kb)
     await state.set_state(UserStates.BASE)
 
